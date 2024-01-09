@@ -1,0 +1,13 @@
+// libraries
+@use 'node_modules/kemet-ui/dist/styles/kemet.base.scss';
+
+// project
+@use './partials/base';
+@use './partials/cea';
+@use './partials/gutenberg';
+@use './partials/plugins';
+@use './partials/utilities';
+@use './partials/woocommerce';
+@use './partials/wordpress';
+@use './partials/pages';
+@use './partials/modals';

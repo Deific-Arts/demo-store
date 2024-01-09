@@ -1,0 +1,160 @@
+@use 'node_modules/include-media/dist/_include-media.scss' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  // --page-width: 1440px;
+
+  // --color-primary: rgb(var(--kemet-color-violet-800));
+  --color-white: rgb(var(--kemet-color-white));
+  --color-gray-300: rgb(var(--kemet-color-gray-300));
+  --color-gray-800: rgb(var(--kemet-color-gray-800));
+
+  --color-success: rgb(var(--kemet-color-success));
+  --color-link: rgb(var(--kemet-color-violet-600));
+  --color-sale: rgb(var(--kemet-color-yellow-300));
+  --color-text: rgb(var(--kemet-color-gray-700));
+  --color-button-background: rgb(var(--kemet-color-gray-800));
+
+  --kemet-color-primary: var(--kemet-color-emerald-700);
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+a {
+  color: var(--color-tertiary);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgb(var(--kemet-color-gray-200));
+}
+
+table {
+  color: inherit;
+}
+
+input {
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+kemet-button {
+  white-space: nowrap;
+}
+
+kemet-drawer {
+  display: block;
+
+  &::part(container) {
+    overflow: auto;
+  }
+
+  > [slot="content"] {
+    @include media('>tablet') {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  > [slot="navigation"] aside {
+    a {
+      font-family: 'Poppins', sans-serif;
+      display: block;
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      border-top: 1px solid rgba(0,0,0,0.25)
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 128px;
+    }
+  }
+}
+
+kemet-carousel {
+  &::part(slides) {
+    padding: 0;
+    border: none;
+  }
+}
+
+kemet-modal {
+  --kemet-modal-content-mobile-padding: 0;
+
+  & > section {
+    width: 100vw;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 2rem;
+    background-color: var(--color-rich-white);
+  }
+}
+
+kemet-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  z-index: 1;
+}
+
+kemet-alert {
+  position: absolute;
+
+  &[opened] {
+    position: static;
+  }
+}
+
+kemet-select {
+  --kemet-select-border: 1px solid var(--color-gray-800);
+}

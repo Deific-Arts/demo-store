@@ -1,0 +1,197 @@
+.woocommerce,
+.woocommerce-page {
+  fieldset {
+    border: 0;
+    margin: 2rem 0 0 0;
+    padding: 0;
+  }
+
+  a.button,
+  button.button,
+  .track_order button.button,
+  .add_to_cart_button,
+  .wc-block-cart__submit a,
+  .wc-block-components-button {
+    font-size: 1.25rem;
+    color: var(--color-white);
+    padding: calc(0.667em + 2px) calc(1.333em + 2px);
+    border: 0;
+    border-radius: var(--kemet-border-radius-pill);
+    background-color: var(--color-button-background);
+
+    &:hover {
+      filter: brightness(1.25);
+      background-color: var(--color-button-background);
+    }
+  }
+
+  .content-area {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+
+  }
+
+  .woocommerce-result-count {
+    font-weight: bold;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    border-top: 1px solid var(--color-gray-300);
+  }
+
+  .orderby {
+    min-width: 248px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  table.shop_table {
+    border: 0;
+  }
+
+  .wc-block-checkout,
+  .woocommerce-order,
+  business-page-main > .woocommerce {
+    max-width: var(--page-width);
+    margin: 2rem auto;
+  }
+
+  business-page-main {
+    > .woocommerce {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .woocommerce-MyAccount-navigation {
+      width: auto;
+      float: none;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        margin: 0 0 2rem 0;
+        padding: 0 0 1rem 0;
+        border-bottom: 1px solid var(--color-gray-300);
+      }
+    }
+  }
+
+  .woocommerce-notice--success {
+    color: var(--color-success);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .woocommerce-thankyou-order-details {
+    margin: 0;
+    padding: 0;
+  }
+
+  .wp-block-woocommerce-cart {
+    max-width: var(--page-width);
+    margin: 2rem auto;
+
+    .is-large.wc-block-cart .wc-block-cart-items td {
+      padding: 0;
+    }
+
+    .is-large.wc-block-cart .wc-block-cart-items td:first-child,
+    .is-large.wc-block-cart .wc-block-cart-items td:last-child {
+      padding: 1rem 0;
+    }
+
+    .is-large.wc-block-cart .wc-block-cart-items td.wc-block-cart-item__product {
+      padding: 1rem;
+    }
+
+    .is-large .wc-block-components-sidebar .wc-block-components-totals-coupon,
+    .is-large .wc-block-components-sidebar .wc-block-components-totals-item,
+    .is-large.wc-block-cart .wc-block-components-sidebar .wc-block-components-shipping-calculator {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .woocommerce-customer-details {
+    address {
+      font-size: 1rem;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  .with-empty-cart-icon {
+    margin: 4rem 0;
+  }
+
+  .woocommerce-form-track-order {
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .select2-selection {
+    height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .select2-selection__arrow {
+    transform: translate(-1rem, 14px);
+  }
+
+  form .form-row-first,
+  form .form-row-last,
+  .woocommerce-MyAccount-content {
+    width: auto;
+    float: none;
+  }
+
+  .woocommerce-address-fields__field-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .woocommerce-EditAccountForm {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  ul.products li.product .onsale {
+    color: var(--color-text);
+    font-size: 1rem;
+    min-width: 0;
+    min-height: 0;
+    line-height: 1;
+    padding: 0.25rem 0.75rem;
+    text-transform: uppercase;
+    border-radius: var(--kemet-border-radius-lg);
+    background-color: var(--color-sale);
+  }
+
+  ul.products li.product a,
+  ul.products li.product a:hover {
+    border: none;
+  }
+
+  ul.products li.product .button,
+  ul.products li.product .button:hover {
+    display: block;
+  }
+
+  li.type-product {
+    text-align: center;
+  }
+
+  .wc-block-components-notice-banner.is-success > svg {
+    background: transparent;
+  }
+}
