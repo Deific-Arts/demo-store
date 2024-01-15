@@ -1,10 +1,10 @@
 @use 'node_modules/include-media/dist/_include-media.scss' as *;
-@use './config.scss' as *;
+@use './helpers.scss';
 
 .alignfull {
-  @extend %alignfull;
+  @extend %align-full;
 }
 
 .alignwide {
-  @extend %alignwide;
+  @extend %align-wide;
 }

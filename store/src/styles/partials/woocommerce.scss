@@ -1,3 +1,5 @@
+@use './helpers.scss';
+
 .woocommerce,
 .woocommerce-page {
   fieldset {
@@ -11,7 +13,9 @@
   .track_order button.button,
   .add_to_cart_button,
   .wc-block-cart__submit a,
-  .wc-block-components-button {
+  .wc-block-components-button,
+  div.product form.cart .button,
+  #respond input#submit {
     font-size: 1.25rem;
     color: var(--color-white);
     padding: calc(0.667em + 2px) calc(1.333em + 2px);
@@ -43,7 +47,7 @@
   .orderby {
     min-width: 248px;
     position: absolute;
-    top: 0;
+    top: -1.25rem;
     right: 0;
   }
 
@@ -193,5 +197,64 @@
 
   .wc-block-components-notice-banner.is-success > svg {
     background: transparent;
+  }
+
+  .woocommerce-tabs {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  .woocommerce-breadcrumb {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-gray-300);
+  }
+
+  span.onsale {
+    color: var(--color-text);
+    line-height: 1;
+    padding: 0.5rem;
+    min-height: auto;
+    min-width: auto;
+    background: var(--color-sale);
+    border-radius: var(--kemet-border-radius-lg);
+  }
+
+  div.product p.price,
+  ul.products li.product .price {
+    color: var(--color-success);
+  }
+
+  div.product form.cart .variations {
+    text-align: left;
+  }
+
+  div.product form.cart div.quantity {
+    margin: 0 2.25rem 0 0;
+  }
+
+  div.product form.cart select {
+    @extend %select-arrow;
+
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  div.product form.cart .variations td,
+  div.product form.cart .variations th {
+    vertical-align: middle;
+    font-size: 1rem;
+    text-transform: capitalize;
+  }
+
+  .comment-form,
+  #review_form #respond {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+
+    label {
+      margin-right: 1rem;
+    }
   }
 }

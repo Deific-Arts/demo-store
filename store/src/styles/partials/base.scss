@@ -16,7 +16,7 @@
 
   --color-success: rgb(var(--kemet-color-success));
   --color-link: rgb(var(--kemet-color-violet-600));
-  --color-sale: rgb(var(--kemet-color-yellow-300));
+  --color-sale: rgb(var(--kemet-color-green-400));
   --color-text: rgb(var(--kemet-color-gray-700));
   --color-button-background: rgb(var(--kemet-color-gray-800));
 
@@ -70,9 +70,14 @@ table {
   color: inherit;
 }
 
-input {
+input,
+textarea {
   font-size: 1rem;
   padding: 1rem;
+}
+
+textarea {
+  min-height: 10em;
 }
 
 kemet-button {

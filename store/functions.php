@@ -97,10 +97,13 @@ if (!class_exists('\business\Theme')) {
     }
 
     public static function add_meta_tags() {
+      $siteLogoID = get_theme_mod('site-logo');
+      $siteLogoURL = wp_get_attachment_url($siteLogoID);
+
       echo '<meta name="author" content="Deific Arts, LLC">';
       echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
       echo '<base href="/">';
-      echo '<link rel="icon" href="'. get_theme_file_uri('/images/favicon.ico') .'">';
+      echo '<link rel="icon" href="'. $siteLogoURL .'">';
       echo '<meta name="theme-color" content="#2557a7"/>';
       echo '<meta name="mobile-web-app-capable" content="yes">';
       echo '<meta name="application-name" content="'. get_bloginfo('name') .'">';

@@ -1,12 +1,19 @@
-.yith-wcwl-form {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.business {
+  .yith-wcwl-form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
-  .yith-wcwl-share {
-    display: none;
+    .yith-wcwl-share {
+      display: none;
+    }
+
+    table.shop_table th {
+      display: none;
+    }
   }
 
-  table.shop_table th {
-    display: none;
+  .yith-wcwl-add-to-wishlist {
+    margin: 2rem 0;
   }
 }
+
