@@ -31,8 +31,10 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 const Edit = ({attributes, setAttributes}) => {
-  const { width, backgroundColor } = attributes;
+  const { width, backgroundColor, className } = attributes;
   const contentStyles = width ? { width } : null;
+
+  console.log(attributes);
 
   return ([
     <InspectorControls key="business-hero-controls" style={{ marginBottom: '40px' }}>
@@ -43,7 +45,7 @@ const Edit = ({attributes, setAttributes}) => {
         <ColorPalette value={backgroundColor} onChange={(state) => setAttributes({ backgroundColor: state })} />
       </PanelBody>
     </InspectorControls>,
-    <business-page-container key="business-page-container" style={{backgroundColor}}>
+    <business-page-container className={className} key="business-page-container" style={{backgroundColor}}>
       <div style={contentStyles}>
         <InnerBlocks />
       </div>

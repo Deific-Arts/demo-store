@@ -43,3 +43,4 @@ import './components/business-hero/business-hero';
 // scripts
 import './scripts/orderby';
 import './scripts/visible';
+import './scripts/close';

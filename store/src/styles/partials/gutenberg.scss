@@ -6,7 +6,11 @@
     padding: 0;
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 1fr 1fr;
+
+    @include media('>tablet') {
+      grid-template-columns: repeat(6, 1fr);
+    }
 
     a {
       display: flex;
@@ -121,6 +125,7 @@
   }
 
   .wc-block-grid .wc-block-grid__product-onsale {
+    color: var(--color-white);
     border: 0;
     background: var(--color-sale);
   }

@@ -21,9 +21,9 @@ business-hero {
   h5,
   h6 {
     --wp--preset--font-size--small: 1rem;
-    --wp--preset--font-size--medium: 2rem;
-    --wp--preset--font-size--large: 4rem;
-    --wp--preset--font-size--x-large: 6rem;
+    --wp--preset--font-size--medium: clamp(1rem, 10vw, 2rem);
+    --wp--preset--font-size--large: clamp(1.5rem, 10vw, 4rem);
+    --wp--preset--font-size--x-large: clamp(2rem, 10vw, 6rem);
 
     line-height: 1;
   }

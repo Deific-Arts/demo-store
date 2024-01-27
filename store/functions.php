@@ -52,6 +52,7 @@ if (!class_exists('\business\Theme')) {
 
       // menu
       register_nav_menu('header', 'Header');
+      register_nav_menu('drawer', 'Drawer');
       register_nav_menu('top-nav', 'Top Nav');
       register_nav_menu('useful-links', 'Useful Links');
       register_nav_menu('legal', 'Legal');

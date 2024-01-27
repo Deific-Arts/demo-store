@@ -16,11 +16,11 @@ import { InnerBlocks } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 const Save = ({attributes}) => {
-  const { width, backgroundColor } = attributes;
+  const { width, backgroundColor, className } = attributes;
   const contentStyles = width ? { width } : null;
 
   return (
-    <business-page-container style={{ backgroundColor }}>
+    <business-page-container className={className} style={{ backgroundColor }}>
       <div style={contentStyles}>
         <InnerBlocks.Content />
       </div>

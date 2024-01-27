@@ -8,3 +8,11 @@
 .alignwide {
   @extend %align-wide;
 }
+
+input[type=submit] {
+  @extend %button;
+}
+
+form[name=loginform] {
+  margin: 1rem;
+}

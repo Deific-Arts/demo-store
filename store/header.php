@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body <?php body_class(); ?>>
-  <kemet-drawer effect="slide" side="left" style="visibility:hidden;">
+  <kemet-drawer overlay effect="slide" side="left" style="visibility:hidden;">
     <nav slot="navigation">
       <?php get_sidebar(); ?>
     </nav>

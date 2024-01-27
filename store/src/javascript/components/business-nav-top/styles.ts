@@ -2,15 +2,17 @@ import { css } from 'lit';
 
 export default css`
   :host {
+    display: flex;
     background: rgb(var(--kemet-color-violet-900));
   }
 
   div {
     display: flex;
+    flex: 1;
+    justify-content: flex-end;
     padding: 1rem;
     margin: auto;
     max-width: var(--page-width);
-    justify-content: space-between;
   }
 
   form {
@@ -18,6 +20,13 @@ export default css`
     gap: 0.5rem;
     padding: 0;
     margin: 0;
+  }
+
+  button {
+    color: rgb(var(--kemet-color-white));
+    padding: 0 1rem;
+    border: 0;
+    background: none;
   }
 
   kemet-input {
@@ -35,6 +44,12 @@ export default css`
   }
 
   @media screen and (min-width: 769px) {
+    div {
+      width: 100%;
+      flex: 0 0 auto;
+      justify-content: space-between;
+    }
+
     kemet-input {
       width: 212px;
     }

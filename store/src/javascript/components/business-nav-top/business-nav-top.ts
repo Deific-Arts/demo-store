@@ -1,6 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property, query } from 'lit/decorators.js';
-import KemetInput from 'kemet-ui/dist/components/kemet-input/kemet-input'
+import KemetInput from 'kemet-ui/dist/components/kemet-input/kemet-input';
+import { svgHamburger } from '../assets/svgs';
 import styles from './styles';
 
 @customElement('business-nav-top')
@@ -27,6 +28,7 @@ class BusinessNavTop extends LitElement {
 
 	render() {
 		return html`
+      ${this.makeButton()}
       <div>
         <slot></slot>
         <form>
@@ -49,5 +51,20 @@ class BusinessNavTop extends LitElement {
     if (event.key === 'Enter') {
       this.handleSearch(event);
     }
+  }
+
+  makeButton() {
+    if (window.matchMedia('screen and (max-width: 767px)').matches) {
+      return html`
+        <button @click="${() => this.toggleDrawer()}">
+          <kemet-icon icon="list" size="32"></kemet-icon>
+        </button>
+      `;
+    }
+  }
+
+  toggleDrawer() {
+    const drawer = document.querySelector('kemet-drawer');
+    drawer.opened = !drawer.opened;
   }
 }
