@@ -4,7 +4,7 @@
   "description": "Demo store site.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run rimraf && rollup -c && npm run wp-scripts:build",
+    "build": "npm run rimraf && npm run wp-scripts:build && rollup -c",
     "docker": "./docker.sh",
     "plugins": "wp-env run cli wp plugin install updraftplus autoptimize wordpress-seo wpforms-lite wp-mail-smtp customizer-export-import woocommerce mailpoet yith-woocommerce-wishlist",
     "rimraf": "rimraf store/build",
