@@ -22,4 +22,4 @@ jobs:
           password: ${{ secrets.FTP_DEPLOY_PASSWORD }}
           port: ${{ secrets.FTP_DEPLOY_PORT }}
           local-dir: './store/'
-          server-dir: './public_html/demos/store/wp-content/themes/store/'
+          server-dir: './demos/store/wp-content/themes/store/'
