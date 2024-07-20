@@ -10,6 +10,7 @@
     "rimraf": "rimraf store/build",
     "start": "npm run wp-env:start && npm run docker && npm run watch",
     "watch": "concurrently npm:rimraf npm:wp-scripts:start \"rollup -c --watch\"",
+    "wp-env:path": "wp-env install-path",
     "wp-env:start": "wp-env start --update",
     "wp-env:stop": "wp-env stop",
     "wp-scripts:build": "wp-scripts build --webpack-src-dir=store/blocks --output-path=store/build",
